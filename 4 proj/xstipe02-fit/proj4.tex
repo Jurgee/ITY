@@ -1,0 +1,65 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm, top=3cm, text={17cm, 24cm}]{geometry}
+\usepackage{times}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{amssymb, amsthm, amsmath}
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+    {\Huge \textsc{Vysoké učení technické v Brně}}\\[0.4em]
+    {\huge \textsc{Fakulta informačních technologií}}\\
+    \vspace{\stretch{0.382}}
+    {\LARGE Typografie a publikování -- 4. projekt\\[0.3em]
+    {\Huge Bibliografické citace}}
+    \vspace{\stretch{0.618}}
+\end{center}
+{\Large \today \hfill Jiří Štípek}
+\end{titlepage}
+\newpage
+\section{Systém \LaTeX}
+
+\subsection{Definice \LaTeX u}
+\LaTeX \;je systém pro přípravu dokumentů pro vysoce kvalitní sazbu. \LaTeX \;je typografickým systémem, který je určen k sazbě vědeckých a matematických dokumentů vysoké typografické kvality. Více o základech v \LaTeX u se popisuje v této knižní podobě \cite{Rybicka2003}
+
+Systém je rovněž vhodný pro tvorbu všech možných druhů jiných dokumentů, od jednoduchých dopisů, až po složité knihy. Systém \LaTeX \;je postaven na typografickém formátovacím programu TEX Donalda E. Knutha viz \cite{Bartlik2017thesis}.
+\subsection{Struktura dokumentu}
+Vstupní soubory \LaTeX u mají pevně danou strukturu. Každý vstupní soubor musí začínat příkazem
+
+\verb-\documentclass[options]{class}-\\
+Tento příkaz definuje třídu dokumentu a ve volitelném parametru lze nastavit formát stránky,
+velikost písma apod., více se informací se dovíte ve článku \cite{Lehocky2014}. Nasledující část vstupního souboru se nazyvá preambule \cite{pieters_2016}. 
+
+\verb-\usepackage[options]{package}-\\
+Dále následuje samotná textová část, která je uvozena příkazem
+
+\verb-\begin{document}-\\
+a obsahuje text s dalšímy příkazy. Textová část je ukončena příkazem
+
+\verb-end{document}-\\
+tímto příkazem také končí celý vstupní soubor a cokoliv následujícího je \LaTeX em ignorováno, více \cite{Divila2016thesis}
+\subsection{Online \LaTeX \;editory}
+Seznam nejlepších online \LaTeX \;editorů lze nalézt \cite{an_8.6_7.9_2021} 
+\subsection{Proč právě \LaTeX}
+\begin{itemize}
+    \item profesionální vzhled dokumentů
+    \item rychlé a jednoduché psaní rovnic
+    \item jednoduchá implementace obrázků
+    \item skvělý pro práci s citacemi
+    
+\end{itemize}
+Více o výhodách viz \cite{rysava_2019}
+
+\subsection{Možnosti úpravy textu v \LaTeX u}
+\LaTeX \;má obsáhlé možnosti, jak upravovat text. Začínaje od jednoduchých \textcolor{blue}{barev}, přes velikost {\huge písma} až po jejich vzájemné \textcolor{red}{\Large kombinace}, viz \cite{kopka_daly_2013}
+\subsection{Matematické funkce v \LaTeX u}
+\LaTeX \;má funkci na vypisovnání matematických rovnic (různé příklady viz \cite{CazarezCastro2012}). Používá se k tomu \verb-$$-, do kterých se musí funkce uzavřít. Můžeme psát například zlomky $\dfrac{x}{y}$ nebo písmena řecké abecedy $\alpha \beta \gamma$, více zde \cite{Olsak2014}.
+\newpage
+\bibliographystyle{czechiso}
+\renewcommand{\refname}{Použitá literatura}
+\bibliography{proj4}
+\end{document}
